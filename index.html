@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Razorpay Button Test</title>
+    <style>
+        .styled-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-decoration: none;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Button Comparison Example</h1>
+    <p>Right-click on the buttons below and compare their behavior:</p>
+
+    <!-- Standard Button Styled as a Link with Tracking Parameter -->
+    <a href="https://example.com?utm_source=test" class="styled-button">
+        Standard Styled Button
+    </a>
+    <br><br>
+
+    <!-- Razorpay Payment Button -->
+    <form>
+        <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_PY4HdILclDEC3W" async></script>
+    </form>
+</body>
+</html>

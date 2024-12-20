@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Razorpay Payment Example</title>
+    <script>
+        function handleImageClick() {
+            // Hide the image
+            const image = document.getElementById('payment-image');
+            image.style.display = 'none';
+
+            // Start the timer for redirection
+            setTimeout(() => {
+                window.location.href = 'https://www.example.com';
+            }, 10000); // 10 seconds
+        }
+    </script>
+</head>
+<body>
+    <h1>Razorpay Payment Example</h1>
+    <p>Click the image below to proceed:</p>
+    
+    <!-- Image Section -->
+    <img id="payment-image" 
+         src="image.png" 
+         alt="Payment Image" 
+         style="width:160px;height:auto;z-index:999;position:absolute;top:113px;cursor:pointer;" 
+         onclick="handleImageClick()">
+
+    <!-- Razorpay Payment Button -->
+    <form>
+        <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_PY4HdILclDEC3W" async></script>
+    </form>
+</body>
+</html>
